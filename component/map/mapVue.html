@@ -1,0 +1,14 @@
+<fieldset ng-keypress="checkIfEnterKeyWasPressed($event)" tabindex="1" >
+	<legend>Map</legend>
+	<!--{{inputKey}}-->
+	
+	<div ng-repeat="tile in tileMap track by $index">
+		<img class="tile" ng-src="{{tile.src}}" ng-style="{	'left' : '{{tile.positionX}}',
+															'top' : '{{tile.positionY}}'
+															}"/> 
+	</div>
+	<img class="perso" ng-src="images/perso.gif" ng-style="{'position':'absolute',
+																'left' : ''+posX+'',
+																'top' : ''+posY+''
+																}"/> 
+</fieldset>
